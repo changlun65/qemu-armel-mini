@@ -9,6 +9,7 @@ This is the quick HowTo to use armel (versatile express-a9) qmeu.
 
 1) install qemu, and make sure the qemu supports versatile express.
 > sudo apt-get install qemu
+
 > qemu-system-arm -M ? | grep vexpress
 
 2) extract the tarball into your directory, it includes the following files curretly.
@@ -21,6 +22,7 @@ mini-rootfs.ext2          --> minimal ext2 root file system
                           
 3) launch the running script, the armel emulator will startup and prompt to login.
 > Welcome to Buildroot
+
 > buildroot login: root
 
 4) the emulator supports nfs mount, that means you could mount host directories into arm emulator.
