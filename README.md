@@ -8,7 +8,7 @@ armel emulator will help you to verify or debug armel binary on your laptop.
 This is the quick HowTo to use armel (versatile express-a9) qmeu.
 
 1) install qemu, and make sure the qemu supports versatile express.
-> sudo apt-get install qemu
+> sudo apt-get install qemu qemu-system
 
 > qemu-system-arm -M ? | grep vexpress
 
