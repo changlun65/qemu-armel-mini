@@ -33,3 +33,17 @@ This is the quick HowTo to use armel (versatile express-a9) qmeu.
 ** PLEASE refer how to setup nfs server on your host.
 
 5) after building the armel binary on host, you should be able to debug/profile it on emulator.
+
+
+----------------------------------------------
+linux kernel compile
+toolchain install
+>wget -c https://releases.linaro.org/components/toolchain/binaries/latest-7/arm-linux-gnueabihf/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz
+
+>tar xfv gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz
+
+compile linux
+>make CROSS_COMPILE=/mnt/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- ARCH=arm vexpress_defconfig
+
+>make CROSS_COMPILE=/mnt/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- ARCH=arm -j4
+
