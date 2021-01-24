@@ -23,10 +23,10 @@
 qemu-system-arm -M vexpress-a9 \
                 -cpu cortex-a9 \
                 -m 128M \
-                -kernel zImage-5.6.0-vexpress \
-                -dtb vexpress-v2p-ca9.dtb \
-                -sd mini-rootfs.ext2 \
-                -append "root=/dev/mmcblk0 ro console=tty1 console=ttyAMA0" \
+                -kernel /mnt/linux/git/arch/arm/boot/zImage \
+                -dtb /mnt/linux/git/arch/arm/boot/dts/vexpress-v2p-ca9.dtb \
+                -sd  rootfs.ext4\
+                -append "root=/dev/mmcblk0 rw console=tty1 console=ttyAMA0" \
                 -net nic -net user \
                 -nographic
 
